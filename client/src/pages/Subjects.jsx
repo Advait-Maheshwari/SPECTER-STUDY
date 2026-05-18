@@ -1,74 +1,60 @@
+import { useEffect, useState } from "react"
+
 import Sidebar from "../components/Sidebar"
-import UnitCard from "../components/UnitCard"
+import SubjectCard from "../components/SubjectCard"
+
+import api from "../api/api"
 
 function Subjects() {
 
-  const physicsUnits = [
-    {
-      name: "Electric Charges",
-      status: "Mastered"
-    },
-    {
-      name: "Coulomb Law",
-      status: "Practicing"
-    },
-    {
-      name: "Electric Field",
-      status: "Learning"
-    }
-  ]
+  const [subjects, setSubjects] = useState([])
 
-  const mathUnits = [
-    {
-      name: "Limits",
-      status: "Mastered"
-    },
-    {
-      name: "Differentiation",
-      status: "Revised"
-    },
-    {
-      name: "Integration",
-      status: "Not Started"
+  useEffect(() => {
+
+    const fetchSubjects = async () => {
+
+      try {
+
+        const response = await api.get("/subjects")
+
+        setSubjects(response.data)
+
+      } catch (error) {
+
+        console.log(error)
+
+      }
+
     }
-  ]
+
+    fetchSubjects()
+
+  }, [])
 
   return (
-    <div className="flex bg-slate-900 min-h-screen text-white">
+    <div className="flex flex-col md:flex-row bg-slate-900 min-h-screen text-white">
 
       <Sidebar />
 
       <div className="flex-1 p-8">
 
-        <div className="flex items-center justify-between mb-10">
+        <h1 className="text-4xl font-bold mb-10">
+          Subjects
+        </h1>
 
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-            <h1 className="text-4xl font-bold">
-              Subjects
-            </h1>
+          {subjects.map((subject) => (
 
-            <p className="text-slate-400 mt-2">
-              Track your syllabus progress
-            </p>
+            <SubjectCard
+              key={subject.id}
+              subject={subject.subject}
+              progress={70}
+            />
 
-          </div>
-
-          <button className="bg-cyan-400 text-black px-5 py-3 rounded-xl font-bold hover:scale-105 transition">
-            Add Subject
-          </button>
+          ))}
 
         </div>
-
-        <UnitCard
-          unitName="Physics - Electrostatics"
-          topics={physicsUnits}
-        />
-
-        <UnitCard
-          unitName="Mathematics - Calculus"
-          topics={mathUnits}
-        />
 
       </div>
 

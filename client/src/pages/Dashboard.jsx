@@ -1,11 +1,44 @@
+import { useEffect, useState } from "react"
+
 import Sidebar from "../components/Sidebar"
 import ProgressCard from "../components/ProgressCard"
 import ProgressBar from "../components/ProgressBar"
 import DailyGoalCard from "../components/DailyGoalCard"
 
+import api from "../api/api"
+
 function Dashboard() {
+
+  const [progress, setProgress] = useState({
+    overallProgress: 0,
+    completedTopics: 0,
+    streak: 0
+  })
+
+  useEffect(() => {
+
+    const fetchProgress = async () => {
+
+      try {
+
+        const response = await api.get("/progress")
+
+        setProgress(response.data)
+
+      } catch (error) {
+
+        console.log(error)
+
+      }
+
+    }
+
+    fetchProgress()
+
+  }, [])
+
   return (
-    <div className="flex flex-col md:flex-row bg-slate-900 min-h-screen text-white">
+    <div className="flex bg-slate-900 text-white min-h-screen">
 
       <Sidebar />
 
@@ -14,6 +47,7 @@ function Dashboard() {
         <div className="flex items-center justify-between mb-10">
 
           <div>
+
             <h1 className="text-4xl font-bold">
               Dashboard
             </h1>
@@ -21,25 +55,8 @@ function Dashboard() {
             <p className="text-slate-400 mt-2">
               Track your academic progress
             </p>
+
           </div>
-
-          <input
-            type="text"
-            placeholder="Search subjects..."
-            className="bg-slate-800 border border-slate-700 rounded-xl px-5 py-3 outline-none"
-          />
-
-        <div className="flex gap-4 mt-5 mb-10">
-
-          <button className="bg-cyan-400 text-black px-5 py-3 rounded-xl font-bold hover:scale-105 transition">
-              Continue Studying
-           </button>
-
-           <button className="border border-slate-700 px-5 py-3 rounded-xl hover:border-cyan-400 transition">
-             View Analytics
-           </button>
-
-        </div>
 
         </div>
 
@@ -47,17 +64,17 @@ function Dashboard() {
 
           <ProgressCard
             title="Overall Progress"
-            value="72%"
+            value={`${progress.overallProgress}%`}
           />
 
           <ProgressCard
             title="Completed Topics"
-            value="148"
+            value={progress.completedTopics}
           />
 
           <ProgressCard
             title="Study Streak"
-            value="12 Days"
+            value={`${progress.streak} Days`}
           />
 
         </div>
