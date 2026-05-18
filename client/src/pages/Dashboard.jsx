@@ -11,9 +11,25 @@ function Dashboard() {
 
       <div className="flex-1 p-8">
 
-        <h1 className="text-4xl font-bold mb-8">
-          Dashboard
-        </h1>
+        <div className="flex items-center justify-between mb-10">
+
+          <div>
+            <h1 className="text-4xl font-bold">
+              Dashboard
+            </h1>
+
+            <p className="text-slate-400 mt-2">
+              Track your academic progress
+            </p>
+          </div>
+
+          <input
+            type="text"
+            placeholder="Search subjects..."
+            className="bg-slate-800 border border-slate-700 rounded-xl px-5 py-3 outline-none"
+          />
+
+        </div>
 
         <div className="grid grid-cols-3 gap-5 mb-10">
 

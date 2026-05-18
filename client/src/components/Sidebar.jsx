@@ -31,6 +31,20 @@ function Sidebar() {
           Tests
         </Link>
 
+        <Link
+          to="/analytics"
+          className="hover:text-cyan-400 transition"
+        >
+          Analytics
+        </Link>
+
+        <Link
+          to="/profile"
+          className="hover:text-cyan-400 transition"
+        >
+          Profile
+        </Link>
+
       </div>
 
     </div>
