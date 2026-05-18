@@ -10,39 +10,28 @@ function Sidebar() {
 
       <div className="flex flex-col gap-5 text-slate-300">
 
-        <Link
-          to="/"
-          className="hover:text-cyan-400 transition"
-        >
+        <Link to="/" className="hover:text-cyan-400 transition">
           Dashboard
         </Link>
 
-        <Link
-          to="/subjects"
-          className="hover:text-cyan-400 transition"
-        >
+        <Link to="/subjects" className="hover:text-cyan-400 transition">
           Subjects
         </Link>
 
-        <Link
-          to="/tests"
-          className="hover:text-cyan-400 transition"
-        >
+        <Link to="/tests" className="hover:text-cyan-400 transition">
           Tests
         </Link>
 
-        <Link
-          to="/analytics"
-          className="hover:text-cyan-400 transition"
-        >
+        <Link to="/analytics" className="hover:text-cyan-400 transition">
           Analytics
         </Link>
 
-        <Link
-          to="/profile"
-          className="hover:text-cyan-400 transition"
-        >
+        <Link to="/profile" className="hover:text-cyan-400 transition">
           Profile
+        </Link>
+
+        <Link to="/academic" className="hover:text-cyan-400 transition">
+          Academic
         </Link>
 
         <div className="border-t border-slate-800 pt-5 mt-5 flex flex-col gap-5">

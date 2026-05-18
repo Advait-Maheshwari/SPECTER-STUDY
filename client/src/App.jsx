@@ -7,6 +7,7 @@ import Analytics from "./pages/Analytics"
 import Profile from "./pages/Profile"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
+import Academic from "./pages/Academic"
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <Route path="/login" element={<Login />} />
 
       <Route path="/signup" element={<Signup />} />
+
+      <Route path="/academic" element={<Academic />} />
 
     </Routes>
   )

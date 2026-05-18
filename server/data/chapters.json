@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "subject": "Physics",
+    "chapter": "Electric Charges and Fields",
+    "units": [
+      "Electric Charge",
+      "Coulomb Law",
+      "Electric Field",
+      "Electric Flux"
+    ]
+  },
+  {
+    "id": 2,
+    "subject": "Chemistry",
+    "chapter": "Thermodynamics",
+    "units": [
+      "System and Surroundings",
+      "Internal Energy",
+      "Enthalpy",
+      "Entropy"
+    ]
+  },
+  {
+    "id": 3,
+    "subject": "Mathematics",
+    "chapter": "Integration",
+    "units": [
+      "Indefinite Integration",
+      "Definite Integration",
+      "Properties",
+      "Applications"
+    ]
+  }
+]

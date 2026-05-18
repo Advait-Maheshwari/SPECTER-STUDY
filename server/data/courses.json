@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "course": "CBSE"
+  },
+  {
+    "id": 2,
+    "course": "ICSE"
+  },
+  {
+    "id": 3,
+    "course": "JEE"
+  },
+  {
+    "id": 4,
+    "course": "NEET"
+  },
+  {
+    "id": 5,
+    "course": "UPSC"
+  }
+]
