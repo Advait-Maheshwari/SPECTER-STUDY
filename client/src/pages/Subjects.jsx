@@ -17,6 +17,8 @@ function Subjects() {
 
         const response = await api.get("/subjects")
 
+        console.log(response.data)
+
         setSubjects(response.data)
 
       } catch (error) {
@@ -44,15 +46,20 @@ function Subjects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-          {subjects.map((subject) => (
+          {subjects.map((item) => (
 
-            <SubjectCard
-              key={subject.id}
-              subject={subject.subject}
-              progress={70}
-            />
+  <div
+    key={item.id}
+    className="bg-slate-800 p-6 rounded-2xl border border-slate-700"
+  >
 
-          ))}
+    <h2 className="text-2xl font-bold text-cyan-400">
+      {item.subject}
+    </h2>
+
+  </div>
+
+))}
 
         </div>
 

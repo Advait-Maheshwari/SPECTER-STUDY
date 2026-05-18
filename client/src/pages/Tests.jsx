@@ -16,6 +16,8 @@ function Tests() {
 
         const response = await api.get("/tests")
 
+        console.log(response.data)
+
         setTests(response.data)
 
       } catch (error) {
@@ -45,26 +47,22 @@ function Tests() {
 
           {tests.map((test, index) => (
 
-            <div
-              key={index}
-              className="bg-slate-800 p-6 rounded-2xl border border-slate-700"
-            >
+  <div
+    key={index}
+    className="bg-slate-800 p-6 rounded-2xl border border-slate-700"
+  >
 
-              <h2 className="text-2xl font-bold text-cyan-400 mb-3">
-                {test.difficulty} Test
-              </h2>
+    <h2 className="text-2xl font-bold text-cyan-400">
+      {test.difficulty}
+    </h2>
 
-              <p className="text-slate-300 mb-5">
-                {test.questions} Questions
-              </p>
+    <p className="mt-3">
+      Questions: {test.questions}
+    </p>
 
-              <button className="bg-cyan-400 text-black px-5 py-2 rounded-xl font-bold">
-                Start Test
-              </button>
+  </div>
 
-            </div>
-
-          ))}
+))}
 
         </div>
 
