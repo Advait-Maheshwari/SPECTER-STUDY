@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Sidebar() {
   return (
     <div className="w-64 min-h-screen bg-slate-950 border-r border-slate-800 p-5">
@@ -8,21 +10,26 @@ function Sidebar() {
 
       <div className="flex flex-col gap-5 text-slate-300">
 
-        <button className="text-left hover:text-cyan-400 transition">
+        <Link
+          to="/"
+          className="hover:text-cyan-400 transition"
+        >
           Dashboard
-        </button>
+        </Link>
 
-        <button className="text-left hover:text-cyan-400 transition">
+        <Link
+          to="/subjects"
+          className="hover:text-cyan-400 transition"
+        >
           Subjects
-        </button>
+        </Link>
 
-        <button className="text-left hover:text-cyan-400 transition">
-          Progress
-        </button>
-
-        <button className="text-left hover:text-cyan-400 transition">
+        <Link
+          to="/tests"
+          className="hover:text-cyan-400 transition"
+        >
           Tests
-        </button>
+        </Link>
 
       </div>
 
