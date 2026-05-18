@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function Sidebar() {
   return (
-    <div className="w-64 min-h-screen bg-slate-950 border-r border-slate-800 p-5">
+    <div className="w-full md:w-64 min-h-screen bg-slate-950 border-r border-slate-800 p-5">
 
       <h1 className="text-3xl font-bold text-cyan-400 mb-10">
         SPECTER
@@ -44,6 +44,24 @@ function Sidebar() {
         >
           Profile
         </Link>
+
+        <div className="border-t border-slate-800 pt-5 mt-5 flex flex-col gap-5">
+
+          <Link
+            to="/login"
+            className="hover:text-cyan-400 transition"
+          >
+            Login
+          </Link>
+
+          <Link
+            to="/signup"
+            className="bg-cyan-400 text-black px-4 py-2 rounded-xl font-bold text-center hover:scale-105 transition"
+          >
+            Signup
+          </Link>
+
+        </div>
 
       </div>
 

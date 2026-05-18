@@ -2,7 +2,7 @@ import Sidebar from "../components/Sidebar"
 
 function Profile() {
   return (
-    <div className="flex bg-slate-900 text-white min-h-screen">
+    <div className="flex flex-col md:flex-row bg-slate-900 text-white min-h-screen">
 
       <Sidebar />
 

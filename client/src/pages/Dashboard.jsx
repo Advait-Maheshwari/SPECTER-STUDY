@@ -5,7 +5,7 @@ import DailyGoalCard from "../components/DailyGoalCard"
 
 function Dashboard() {
   return (
-    <div className="flex bg-slate-900 text-white min-h-screen">
+    <div className="flex flex-col md:flex-row bg-slate-900 min-h-screen text-white">
 
       <Sidebar />
 
@@ -29,9 +29,21 @@ function Dashboard() {
             className="bg-slate-800 border border-slate-700 rounded-xl px-5 py-3 outline-none"
           />
 
+        <div className="flex gap-4 mt-5 mb-10">
+
+          <button className="bg-cyan-400 text-black px-5 py-3 rounded-xl font-bold hover:scale-105 transition">
+              Continue Studying
+           </button>
+
+           <button className="border border-slate-700 px-5 py-3 rounded-xl hover:border-cyan-400 transition">
+             View Analytics
+           </button>
+
         </div>
 
-        <div className="grid grid-cols-3 gap-5 mb-10">
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
 
           <ProgressCard
             title="Overall Progress"
@@ -50,7 +62,7 @@ function Dashboard() {
 
         </div>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
           <div>
 

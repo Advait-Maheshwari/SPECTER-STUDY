@@ -40,9 +40,25 @@ function Subjects() {
 
       <div className="flex-1 p-8">
 
-        <h1 className="text-4xl font-bold mb-10">
-          Subjects
-        </h1>
+        <div className="flex items-center justify-between mb-10">
+
+          <div>
+
+            <h1 className="text-4xl font-bold">
+              Subjects
+            </h1>
+
+            <p className="text-slate-400 mt-2">
+              Track your syllabus progress
+            </p>
+
+          </div>
+
+          <button className="bg-cyan-400 text-black px-5 py-3 rounded-xl font-bold hover:scale-105 transition">
+            Add Subject
+          </button>
+
+        </div>
 
         <UnitCard
           unitName="Physics - Electrostatics"
