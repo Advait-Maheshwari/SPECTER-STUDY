@@ -1,3 +1,4 @@
+const searchRoutes = require("./routes/search")
 const express = require("express")
 const cors = require("cors")
 require("dotenv").config()
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
   })
 })
 
+app.use("/api/search", searchRoutes)
 app.use("/api/subjects", subjectRoutes)
 app.use("/api/progress", progressRoutes)
 app.use("/api/tests", testRoutes)

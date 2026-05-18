@@ -1,0 +1,70 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "CBSE",
+      "streams": [
+        {
+          "id": 1,
+          "name": "Science",
+          "classes": [
+            {
+              "id": 1,
+              "name": "Class 12",
+              "subjects": [
+                {
+                  "id": 1,
+                  "name": "Physics",
+                  "optional": false,
+                  "chapters": [
+                    {
+                      "id": 1,
+                      "name": "Electrostatics",
+                      "units": [
+                        "Electric Charges",
+                        "Coulomb Law",
+                        "Electric Field"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 2,
+                  "name": "Chemistry",
+                  "optional": false,
+                  "chapters": [
+                    {
+                      "id": 2,
+                      "name": "Thermodynamics",
+                      "units": [
+                        "Enthalpy",
+                        "Entropy",
+                        "Internal Energy"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 3,
+                  "name": "Computer Science",
+                  "optional": true,
+                  "chapters": [
+                    {
+                      "id": 3,
+                      "name": "Python Programming",
+                      "units": [
+                        "Variables",
+                        "Loops",
+                        "Functions"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

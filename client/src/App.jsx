@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-
+import SearchSubjects from "./pages/SearchSubjects"
 import Dashboard from "./pages/Dashboard"
 import Subjects from "./pages/Subjects"
 import Tests from "./pages/Tests"
@@ -28,6 +28,8 @@ function App() {
       <Route path="/signup" element={<Signup />} />
 
       <Route path="/academic" element={<Academic />} />
+
+      <Route path="/search-subjects" element={<SearchSubjects />} />
 
     </Routes>
   )
