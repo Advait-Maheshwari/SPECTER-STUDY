@@ -1,6 +1,7 @@
 import Sidebar from "../components/Sidebar"
-import SubjectCard from "../components/SubjectCard"
 import ProgressCard from "../components/ProgressCard"
+import ProgressBar from "../components/ProgressBar"
+import DailyGoalCard from "../components/DailyGoalCard"
 
 function Dashboard() {
   return (
@@ -33,26 +34,61 @@ function Dashboard() {
 
         </div>
 
-        <h2 className="text-3xl font-bold mb-5">
-          Subjects
-        </h2>
+        <div className="grid grid-cols-2 gap-8">
 
-        <div className="grid grid-cols-3 gap-5">
+          <div>
 
-          <SubjectCard
-            subject="Physics"
-            progress="80"
-          />
+            <h2 className="text-3xl font-bold mb-5">
+              Subject Progress
+            </h2>
 
-          <SubjectCard
-            subject="Chemistry"
-            progress="65"
-          />
+            <div className="flex flex-col gap-5">
 
-          <SubjectCard
-            subject="Mathematics"
-            progress="90"
-          />
+              <ProgressBar
+                subject="Physics"
+                progress={80}
+              />
+
+              <ProgressBar
+                subject="Chemistry"
+                progress={65}
+              />
+
+              <ProgressBar
+                subject="Mathematics"
+                progress={90}
+              />
+
+            </div>
+
+          </div>
+
+          <div>
+
+            <h2 className="text-3xl font-bold mb-5">
+              Daily Goals
+            </h2>
+
+            <div className="flex flex-col gap-5">
+
+              <DailyGoalCard
+                subject="Physics"
+                goal="Complete Electric Field"
+              />
+
+              <DailyGoalCard
+                subject="Mathematics"
+                goal="Practice Integration Questions"
+              />
+
+              <DailyGoalCard
+                subject="Chemistry"
+                goal="Revise Thermodynamics"
+              />
+
+            </div>
+
+          </div>
 
         </div>
 
